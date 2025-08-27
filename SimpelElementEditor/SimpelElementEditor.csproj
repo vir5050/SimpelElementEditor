@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F1666C9-BD3F-4998-AAC9-E547AE243876}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SimpelElementEditor</RootNamespace>
+    <AssemblyName>SimpelElementEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.8, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.8\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.8, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.9.0.8\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=9.0.0.8, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.9.0.8\lib\net462\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.8, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.8\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.8, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.8\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="COMMON\VECTOR3.cs" />
+    <Compile Include="DataFiles.cs" />
+    <Compile Include="ESO\aiPolicy\aiPolicyTemplate.cs" />
+    <Compile Include="ESO\aiPolicy\CPolicyData.cs" />
+    <Compile Include="ESO\aiPolicy\Condition.cs" />
+    <Compile Include="ESO\aiPolicy\CTriggerData.cs" />
+    <Compile Include="ESO\aiPolicy\Operation.cs" />
+    <Compile Include="ESO\ExtraDrops\extraDropsTemplate.cs" />
+    <Compile Include="ESO\ExtraDrops\EXTRADROPTABLE.cs" />
+    <Compile Include="ESO\gShop\SHOP_CATERGORYS.cs" />
+    <Compile Include="ESO\gShop\GSHOP_ITEM.cs" />
+    <Compile Include="ESO\gShop\gShopTemplate.cs" />
+    <Compile Include="ESO\npcGen\NPCCtrl.cs" />
+    <Compile Include="ESO\npcGen\DynObj.cs" />
+    <Compile Include="ESO\npcGen\ResArea.cs" />
+    <Compile Include="ESO\npcGen\npcGenTemplate.cs" />
+    <Compile Include="ESO\npcGen\AIGEN.cs" />
+    <Compile Include="ESO\Skills\skill.cs" />
+    <Compile Include="ESO\Skills\Skills.cs" />
+    <Compile Include="ESO\TasksSimple\task.cs" />
+    <Compile Include="ESO\PathData\path.cs" />
+    <Compile Include="ESO\PathData\PathTemplate.cs" />
+    <Compile Include="ESO\TasksSimple\TasksSimple.cs" />
+    <Compile Include="ExpandableListConverter.cs" />
+    <Compile Include="COMMON\Enum.cs" />
+    <Compile Include="COMMON\FlagsEnumEditor.cs" />
+    <Compile Include="COMMON\Unicode.cs" />
+    <Compile Include="ESO\Elements\BIRTH_SKILL_CANDIDATE.cs" />
+    <Compile Include="ESO\Elements\ITEM_TRADE_CONFIG.cs" />
+    <Compile Include="ESO\Elements\INSTANCE_CONFIG.cs" />
+    <Compile Include="ESO\Elements\EQUIPMENT_RANDOM_ADDONSGROUP.cs" />
+    <Compile Include="ESO\Elements\window.cs" />
+    <Compile Include="ESO\Elements\talk_proc.cs" />
+    <Compile Include="ESO\Elements\NPC_PROF_DEMOTION_SERVICE.cs" />
+    <Compile Include="ESO\Elements\PLAYER_TALENT_CONFIG.cs" />
+    <Compile Include="ESO\Elements\SPEAKER_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\TALISMAN_ENERGYFOOD_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\TALISMAN_MERGEKATALYST_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\TALISMAN_EXPFOOD_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\TALISMAN_MAINPART_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\POTENTIAL_TOME_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\TEXT_FIREWORKS_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\SPECIAL_ID_CONFIG.cs" />
+    <Compile Include="ESO\Elements\TITLE_PROP_CONFIG.cs" />
+    <Compile Include="ESO\Elements\CAMRECORDER_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\LOTTERY_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\COUPLE_JUMPTO_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\VEHICLE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\SKILLMATTER_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\DOUBLE_EXP_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\DESTROYING_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\CHARRACTER_CLASS_CONFIG.cs" />
+    <Compile Include="ESO\MoneyConverter.cs" />
+    <Compile Include="ESO\Elements\NPC_EQUIPBIND_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_BIRTH_RESET_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_EQUIPUNDESTROY_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_EQUIPDESTROY_SERVICE.cs" />
+    <Compile Include="ESO\Elements\PLAYER_STATUS_POINT_CONFIG.cs" />
+    <Compile Include="ESO\Elements\RECIPEROLL_SUB_TYPE.cs" />
+    <Compile Include="ESO\Elements\RECIPEROLL_MAJOR_TYPE.cs" />
+    <Compile Include="ESO\Elements\RECIPEROLL_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\SUITE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\STATUS_POINT_PROP_CONFIG.cs" />
+    <Compile Include="ESO\Elements\SSTONE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\PSTONE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\ESTONE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\PLAYER_SECONDLEVEL_CONFIG.cs" />
+    <Compile Include="ESO\Elements\NPC_WAR_TOWERBUILD_SERVICE.cs" />
+    <Compile Include="ESO\Elements\PLAYER_LEVELEXP_CONFIG.cs" />
+    <Compile Include="ESO\Elements\FIREWORKS_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\GM_GENERATOR_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\MINE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\MINE_TYPE.cs" />
+    <Compile Include="ESO\Elements\GM_GENERATOR_TYPE.cs" />
+    <Compile Include="ESO\Elements\NPC_RESETPROP_SERVICE.cs" />
+    <Compile Include="ESO\Elements\TASKNORMALMATTER_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\TASKDICE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\PARAM_ADJUST_CONFIG.cs" />
+    <Compile Include="ESO\Elements\ENEMY_FACTION_CONFIG.cs" />
+    <Compile Include="ESO\Elements\RECIPE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\RECIPE_SUB_TYPE.cs" />
+    <Compile Include="ESO\Elements\RECIPE_MAJOR_TYPE.cs" />
+    <Compile Include="ESO\Elements\NPC_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\NPC_TYPE.cs" />
+    <Compile Include="ESO\Elements\NPC_STORAGE_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_PROXY_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_TRANSMIT_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_HEAL_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_BUY_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_TASK_MATTER_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_TASK_OUT_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_TASK_IN_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_SELL_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_TALK_SERVICE.cs" />
+    <Compile Include="ESO\Elements\NPC_SUPER_UPGRADE_SERVICE.cs" />
+    <Compile Include="ESO\Elements\GARDEN_EXCHANGE_CONFIG.cs" />
+    <Compile Include="ESO\Elements\EQUIPMENT_EXCHANGE_CONFIG.cs" />
+    <Compile Include="ESO\Elements\RUNE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\RUNE_COMBINATION_CONFIG.cs" />
+    <Compile Include="ESO\ItemIdConverter.cs" />
+    <Compile Include="ESO\Elements\UPGRADE_TRANSFER_SERVICE.cs" />
+    <Compile Include="ESO\Elements\GARDEN_AWARD.cs" />
+    <Compile Include="ESO\Elements\GARDEN_FUNC_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\BIRTHSKILL_RESET_SERVICE.cs" />
+    <Compile Include="ESO\Elements\SPEAKER_NUM_MONEY_CONFIG.cs" />
+    <Compile Include="ESO\Elements\SPEAKER_LEVEL_NUM_CONFIG.cs" />
+    <Compile Include="ESO\Elements\PETBOX_EXPLIST_CONFIG.cs" />
+    <Compile Include="ESO\Elements\FRUIT_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\GARDEN_TOOL_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\SEED_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\GARDEN_ORNAMENT_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\GARDEN_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\SPECIAL_SPEAKER_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\CHANGE_RECOVER_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\BOOK_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\CHANGE_SHAPE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\HATCHER_MAJOR_TYPE.cs" />
+    <Compile Include="ESO\Elements\PET_MERGE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\PET_PRODUCE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\DROPTABLE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\AI_HELPER_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\NPC_LEARN_PRODUCE_SERVICE.cs" />
+    <Compile Include="ESO\Elements\PRODUCE_TYPE_CONFIG.cs" />
+    <Compile Include="ESO\Elements\NPC_HOTEL_SERVICE.cs" />
+    <Compile Include="ESO\Elements\MERGE_RECIPE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\PET_ARMOR_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\PET_SKILL_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\PET_FOOD_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\PET_BEDGE_ESSENCE.cs" />
+    <Compile Include="ESO\PropIdConverter.cs" />
+    <Compile Include="ESO\Elements\SUMMON_MONSTER_ESSENCE.cs" />
+    <Compile Include="ESO\ElementIdConverter.cs" />
+    <Compile Include="ESO\Elements.cs" />
+    <Compile Include="ESO\Elements\DROPTABLE_TYPE.cs" />
+    <Compile Include="ESO\Elements\HATCHER_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\MONSTER_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\MONSTER_TYPE.cs" />
+    <Compile Include="ESO\Elements\EQUIPMENT_UPGRADE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\AIRCRAFT_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\TASKMATTER_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\REVIVESCROLL_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\TOWNSCROLL_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\LUCKYROLL_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\TRANSMITROLL_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\SKILLTOME_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\SKILLTOME_SUB_TYPE.cs" />
+    <Compile Include="ESO\Elements\REFINE_TICKET_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\EQUIPMENT_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\MATERIAL_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\MEDICINE_ESSENCE.cs" />
+    <Compile Include="ESO\Elements\MATERIAL_MAJOR_TYPE .cs" />
+    <Compile Include="ESO\Elements\MATERIAL_SUB_TYPE.cs" />
+    <Compile Include="ESO\Elements\MEDICINE_SUB_TYPE.cs" />
+    <Compile Include="ESO\Elements\MEDICINE_MAJOR_TYPE.cs" />
+    <Compile Include="ESO\Elements\EQUIPMENT_SUB_TYPE.cs" />
+    <Compile Include="ESO\Elements\EQUIPMENT_MAJOR_TYPE.cs" />
+    <Compile Include="ESO\Elements\EQUIPMENT_ADDON.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntDropdownConverter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FilteredElementsTemplate.cs" />
+    <Compile Include="Reader.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
